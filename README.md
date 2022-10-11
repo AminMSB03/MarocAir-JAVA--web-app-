@@ -26,7 +26,6 @@ the customer can modify or cancel his reservation after the confirmation of his 
 in case of cancellation: 8% of the costs are retained by MarocAir
 
 
-
 ## BackOffice:
 
 A reservation manager (already registered in the system) is in charge of managing the flights (Crud)
@@ -34,7 +33,6 @@ A reservation manager (already registered in the system) is in charge of managin
 The person in charge can consult the statistics of confirmed and cancelled reservations (monthly and annual)
 
 NB: A flight must not exceed 30 passengers
-
 
 
 ## Work to do :
@@ -48,5 +46,3 @@ NB: A flight must not exceed 30 passengers
 -Create a project management file on Trello/Jira
 
 - Realize the number of pages according to your choice in order to guarantee the online reservation procedure
-
-Translated with www.DeepL.com/Translator (free version)
