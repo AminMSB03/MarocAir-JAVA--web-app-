@@ -10,8 +10,10 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/test")
 public class TestController extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+        String name = req.getParameter("name");
+        req.getRequestDispatcher("/views/index.jsp").forward(req, resp);
     }
 }
