@@ -2,4 +2,6 @@
 
 
 
-r>
+<jsp:include page="./components/footer.jsp"/>
+
+
