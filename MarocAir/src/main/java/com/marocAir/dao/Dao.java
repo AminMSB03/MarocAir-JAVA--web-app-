@@ -1,4 +1,4 @@
-package com.marocAir.dao;
+package com.marocair.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
