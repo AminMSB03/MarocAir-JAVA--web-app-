@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="inc/dashboard.header.jsp" />
 <main>
     <div class="mx-auto mb-5 px-4 sm:px-6 md:px-8">
@@ -14,9 +15,9 @@
                             <div class="mb-6 w-full px-3 md:mb-0 md:w-1/2">
                                 <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="directions"> Direction </label>
                                 <div class="relative">
-                                    <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="directions">
+                                    <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" name="direction">
                                         <option value="">Select a direction</option>
-                                        <option>Casablanca - Paris</option>
+                                        <option value="" >Casablanca - Paris</option>
                                         <option>Marrackech - Londres</option>
                                         <option>Agadir - New York</option>
                                         <option>Casablanca - Madrid</option>
@@ -93,9 +94,9 @@
                                 <div class="flex flex-col gap-1 md:flex-row">
                                     <div class="mb-1 w-full md:mb-0">
                                         <div class="relative">
-                                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none">
+                                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" name="from">
                                                 <option value="">stopover city</option>
-                                                <option>Casablanca</option>
+                                                <option value="casablanca">Casablanca</option>
                                                 <option>Marrackech</option>
                                                 <option>Agadir</option>
                                                 <option>Casablanca</option>
@@ -116,7 +117,7 @@
                             <div class="w-full px-3 md:mb-0">
                                 <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="societes"> Societe </label>
                                 <div class="relative mb-3">
-                                    <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="societes">
+                                    <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="societes" name="to">
                                         <option value="">Select a Societe</option>
                                         <option>Royal Air Maroc</option>
                                         <option>Gazelle</option>
@@ -128,7 +129,7 @@
                                 </div>
 
                                 <div class="mb-6 block w-full">
-                                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="submit">Add Flight</button>
+                                    <button class="focus:shadow-outline w-full rounded bg-[#1E70B8] py-2 px-4 font-bold text-white shadow hover:bg-white hover:text-[#1E70B8] border-solid border-2 border-[#1E70B8] focus:outline-none" name="vol" type="submit">Add Flight</button>
                                 </div>
                             </div>
                         </div>
@@ -138,11 +139,11 @@
         </div>
         <div class="max-w-lg lg:min-w-[450px]">
             <h2 class="mb-4 text-lg font-bold text-[#004374]">Add a Direction</h2>
-            <form class="flex flex-col gap-3" action="#" method="post">
+            <form class="flex flex-col gap-3" action="dashboard-servlet" method="post">
                 <div class="flex flex-col gap-1 md:flex-row">
                     <div class="mb-1 w-full md:mb-0 md:w-1/2">
                         <div class="relative">
-                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="depart">
+                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="depart" name="from">
                                 <option value="">From</option>
                                 <option>Casablanca</option>
                                 <option>Marrackech</option>
@@ -160,7 +161,7 @@
                     </div>
                     <div class="mb-3 w-full md:mb-0 md:w-1/2">
                         <div class="relative">
-                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="arrive">
+                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="arrive" name="to">
                                 <option value="">To</option>
                                 <option>Casablanca</option>
                                 <option>Marrackech</option>
@@ -178,7 +179,7 @@
                     </div>
                 </div>
                 <div class="mb-6 block w-full">
-                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="submit">Add</button>
+                    <button class="focus:shadow-outline w-full rounded bg-[#1E70B8] py-2 px-4 font-bold text-white shadow hover:bg-white hover:text-[#1E70B8] border-solid border-2 border-[#1E70B8] focus:outline-none" name="direction" type="submit">Add</button>
                 </div>
             </form>
         </div>
@@ -186,5 +187,19 @@
 </main>
             </div>
         </div>
+        <!-- les messages -->
+        <c:choose>
+            <c:when test="${echo.contains('success')}">
+                <div class="flex absolute top-5 right-5 items-center p-4 space-x-4 w-full max-w-xs text-white bg-green-300 rounded-lg divide-x divide-gray-200 shadow opacity-90" role="alert">
+                    <div class="text-sm font-normal font-bold"><c:out value="${echo}" /></div>
+                </div>
+            </c:when>
+            <c:when test="${echo == null}"></c:when>
+            <c:otherwise>
+                <div class="flex absolute top-5 right-5 items-center p-4 space-x-4 w-full max-w-xs text-white bg-red-300 rounded-lg divide-x divide-gray-200 shadow opacity-90" role="alert">
+                    <div class="text-sm font-normal font-bold"><c:out value="${echo}" /></div>
+                </div>
+            </c:otherwise>
+        </c:choose>
     </body>
 </html>
