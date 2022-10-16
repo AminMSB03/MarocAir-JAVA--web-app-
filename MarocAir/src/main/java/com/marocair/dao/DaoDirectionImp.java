@@ -10,14 +10,18 @@ public class DaoDirectionImp extends Dao implements DaoDirection   {
     public DaoDirectionImp() throws ClassNotFoundException, SQLException {
     }
 
-    public Boolean createDirections(String firstCity, String secondCity) throws SQLException {
-        PreparedStatement st = this.conn.prepareStatement("INSERT INTO direcions(depart,arrive) VALUES(?,?),(?,?)");
-        st.setString(1, firstCity);
-        st.setString(2, secondCity);
-        st.setString(3, secondCity);
-        st.setString(4, firstCity);
-        Boolean result = st.execute();
-        return !result;
+    public Boolean createDirections(String firstCity, String secondCity)  {
+        try {
+            PreparedStatement st = this.conn.prepareStatement("INSERT INTO direcions(depart,arrive) VALUES(?,?),(?,?)");
+            st.setString(1, firstCity);
+            st.setString(2, secondCity);
+            st.setString(3, secondCity);
+            st.setString(4, firstCity);
+            Boolean result = st.execute();
+            return !result;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public int[] selectDirection(String depart, String arrive) throws SQLException {
