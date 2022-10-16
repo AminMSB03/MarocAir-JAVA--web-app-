@@ -47,21 +47,6 @@
 
 
 
-                    <ul class="mt-4 flex gap-2 text-sm font-medium text-gray-900 bg-white ">
-                        <li class="w-1/2 border-b  border-gray-200  border ">
-                            <div class="flex items-center pl-3">
-                                <input id="horizontal-list-radio-li" type="radio" value="" checked name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2" @click="open = true">
-                                <label for="horizontal-list-radio-li" class="py-3 ml-2 w-full text-sm font-medium text-gray-900 " >One way</label>
-                            </div>
-                        </li>
-                        <li class="w-1/2 border-b border-gray-200 border ">
-                            <div class="flex items-center pl-3">
-                                <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2" @click="open = false">
-                                <label for="horizontal-list-radio-id" class="py-3 ml-2 w-full text-sm font-medium text-gray-900 " >Return</label>
-                            </div>
-                        </li>
-                    </ul>
-
 
 
                     <div class="-mx-3 mt-6 mb-4 flex flex-wrap" x-show="open">
@@ -70,21 +55,6 @@
                             <input class="mb-3 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="grid-password" type="date" />
                         </div>
                     </div>
-
-
-                    <div class="-mx-3 mt-6 mb-4 flex flex-wrap" x-show="!open">
-                        <div class="w-full px-3">
-                            <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="date"> Departing </label>
-                            <input class="mb-3 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="date" type="date" />
-                        </div>
-                        <div class="w-full px-3">
-                            <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="return"> Returning </label>
-                            <input class="mb-3 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="return" type="date" />
-                        </div>
-                    </div>
-
-
-
 
 
 
