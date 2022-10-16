@@ -1,51 +1,51 @@
 <jsp:include page="inc/dashboard.header.jsp" />
-                <main>
-                    <div class="mx-auto mb-5 px-4 sm:px-6 md:px-8">
-                        <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
-                    </div>
-                    <div x-data="{ open : false }" class="grid flex-1 px-4 sm:px-6 md:px-8 sm:grid-cols-2 md:grid-cols-2 gap-5" style="{grid-template-rows:auto 1fr;grid-template-columns:auto 1fr;}">
-                        <div class="row-span-2 h-fit max-w-lg lg:w-fit">
-                            <div class="mx-auto max-w-7xl">
-                                <!-- Replace with your content -->
-                                <div>
-                                    <h2 class="mb-5 text-lg font-bold text-indigo-600">Add a Flight</h2>
-                                    <form class="w-full max-w-lg lg:min-w-[450px]">
-                                        <div class="-mx-3 mb-6 flex flex-wrap">
-                                            <div class="mb-6 w-full px-3 md:mb-0 md:w-1/2">
-                                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="directions"> Direction </label>
-                                                <div class="relative">
-                                                    <select class="block w-full appearance-none appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="directions">
-                                                        <option value="">Select a direction</option>
-                                                        <option>Casablanca - Paris</option>
-                                                        <option>Marrackech - Londres</option>
-                                                        <option>Agadir - New York</option>
-                                                        <option>Casablanca - Madrid</option>
-                                                    </select>
-                                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                        <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="w-full px-3 md:w-1/2">
-                                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="grid-last-name"> Price </label>
-                                                <input class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="grid-last-name" pattern="[0-9]+(\\.[0-9][0-9]?)?" type="text" placeholder="1211.32" />
-                                            </div>
-                                        </div>
-                                        <div class="-mx-3 mb-4 flex flex-wrap">
-                                            <div class="w-full px-3">
-                                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="grid-password"> Date And Time </label>
-                                                <input class="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="grid-password" type="datetime-local" />
-                                            </div>
-                                        </div>
-                                        <div class="-mx-3 mb-2 flex flex-wrap">
-                                            <div class="w-full px-3">
-                                                <input x-on:change.debounce="open = ! open" type="checkbox" id="react-option" value="" class="peer hidden" required="" />
-                                                <label for="react-option" class="mb-3 inline-flex w-full cursor-pointer items-center justify-between rounded-lg border-2 border-gray-200 bg-white p-2 text-black hover:bg-gray-50 hover:text-gray-600 peer-checked:border-blue-600 peer-checked:text-gray-600">
-                                                    <div class="block">
-                                                        <svg class="w-20" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900.000000 520.000000">
-                                                            <g transform="translate(-160,520.000000) scale(0.10000,-0.100000)" fill="#000000" stroke="none">
-                                                                <path
-                                                                        d="M2440 4854 c-41 -18 -86 -59 -106 -96 -12 -23 -185 -462 -334 -848
+<main>
+    <div class="mx-auto mb-5 px-4 sm:px-6 md:px-8">
+        <h1 class="text-2xl font-semibold text-[#1E70B8]">Dashboard</h1>
+    </div>
+    <div x-data="{ open : false }" class="grid flex-1 gap-5 px-4 sm:grid-cols-2 sm:px-6 md:grid-cols-2 md:px-8" style="{grid-template-rows:auto 1fr;grid-template-columns:auto 1fr;}">
+        <div class="row-span-2 h-fit max-w-lg lg:w-fit">
+            <div class="mx-auto max-w-7xl">
+                <!-- Replace with your content -->
+                <div>
+                    <h2 class="mb-5 text-lg font-bold text-[#004374]">Add a Flight</h2>
+                    <form class="w-full max-w-lg lg:min-w-[450px]" action="#" method="post">
+                        <div class="-mx-3 mb-6 flex flex-wrap">
+                            <div class="mb-6 w-full px-3 md:mb-0 md:w-1/2">
+                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="directions"> Direction </label>
+                                <div class="relative">
+                                    <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="directions">
+                                        <option value="">Select a direction</option>
+                                        <option>Casablanca - Paris</option>
+                                        <option>Marrackech - Londres</option>
+                                        <option>Agadir - New York</option>
+                                        <option>Casablanca - Madrid</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full px-3 md:w-1/2">
+                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="grid-last-name"> Price </label>
+                                <input class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="grid-last-name" pattern="[0-9]+(\\.[0-9][0-9]?)?" type="text" placeholder="1211.32" />
+                            </div>
+                        </div>
+                        <div class="-mx-3 mb-4 flex flex-wrap">
+                            <div class="w-full px-3">
+                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="grid-password"> Date And Time </label>
+                                <input class="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="grid-password" type="datetime-local" />
+                            </div>
+                        </div>
+                        <div class="-mx-3 mb-2 flex flex-wrap">
+                            <div class="w-full px-3">
+                                <input x-on:change.debounce="open = ! open" type="checkbox" id="react-option" value="" class="peer hidden"  />
+                                <label for="react-option" class="mb-3 inline-flex w-full cursor-pointer items-center justify-between rounded-lg border-2 border-gray-200 bg-white p-2 text-black hover:bg-gray-50 hover:text-gray-600 peer-checked:border-blue-600 peer-checked:text-gray-600">
+                                    <div class="block">
+                                        <svg class="w-20" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900.000000 520.000000">
+                                            <g transform="translate(-160,520.000000) scale(0.10000,-0.100000)" fill="#000000" stroke="none">
+                                                <path
+                                                        d="M2440 4854 c-41 -18 -86 -59 -106 -96 -12 -23 -185 -462 -334 -848
                                 -28 -74 -54 -158 -57 -186 -37 -360 538 -789 1647 -1231 118 -47 218 -88 222
                                 -92 3 -3 -274 -195 -615 -426 -342 -231 -639 -435 -660 -454 -21 -19 -45 -47
                                 -53 -62 -20 -40 -18 -108 6 -146 22 -37 40 -47 186 -105 l109 -43 150 0 c93 0
@@ -72,45 +72,21 @@
                                 -124 516 -7 30 9 29 83 -8z m1663 -2723 c19 -8 55 -22 82 -31 77 -29 100 -107
                                 55 -187 -57 -102 -211 -100 -264 3 -20 39 -20 107 0 147 13 23 61 66 92 80 1
                                 1 17 -5 35 -12z"
-                                                                />
-                                                            </g>
-                                                        </svg>
-                                                        <div class="w-full text-lg font-semibold">Y a-t-il escale</div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="-mx-3 mb-6 flex flex-wrap">
-                                            <div class="w-full px-3 md:mb-0">
-                                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="societes"> Societe </label>
-                                                <div class="relative mb-3">
-                                                    <select class="block w-full appearance-none appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="societes">
-                                                        <option value="">Select a Societe</option>
-                                                        <option>Royal Air Maroc</option>
-                                                        <option>Gazelle</option>
-                                                        <option>Fly Emarates</option>
-                                                    </select>
-                                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                        <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                                                    </div>
-                                                </div>
-
-                                                <div class="mb-6 block w-full">
-                                                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="button">Add</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                                                />
+                                            </g>
+                                        </svg>
+                                        <div class="w-full text-lg font-semibold">Y a-t-il escale</div>
+                                    </div>
+                                </label>
                             </div>
                         </div>
-                        <template x-if="open" class="max-w-lg lg:min-w-[450px] h-fit">
-                            <form class="flex flex-col gap-3" action="#" method="post">
-                                <h2 class="mb-4 text-lg font-bold text-indigo-600">Add a stopover</h2>
+                        <template x-if="open" class="mb-4 h-fit max-w-lg rounded-xl border-2 border-solid border-[#1E70B8] p-4 lg:min-w-[450px]">
+                            <div class="flex flex-col gap-3">
+                                <h2 class="text-md mb-4 font-bold text-[#004374]">Add a stopover</h2>
                                 <div class="flex flex-col gap-1 md:flex-row">
                                     <div class="mb-1 w-full md:mb-0">
                                         <div class="relative">
-                                            <input type="number" name="nbrEscale" id="nbrEscale" class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" placeholder="number of stopovers" />
+                                            <input type="number" min="1" max="1" value="1" name="nbrEscale" id="nbrEscale" class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" placeholder="number of stopovers" />
                                         </div>
                                     </div>
                                 </div>
@@ -134,59 +110,80 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-6 block w-full">
-                                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="button">Add a stopover</button>
-                                </div>
-                            </form>
+                            </div>
                         </template>
-                        <div class="max-w-lg lg:min-w-[450px]">
-                            <h2 class="mb-4 text-lg font-bold text-indigo-600">Add a Direction</h2>
-                            <form class="flex flex-col gap-3" action="#" method="post">
-                                <div class="flex flex-col gap-1 md:flex-row">
-                                    <div class="mb-1 w-full md:mb-0 md:w-1/2">
-                                        <div class="relative">
-                                            <select class="block w-full appearance-none appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="depart">
-                                                <option value="">From</option>
-                                                <option>Casablanca</option>
-                                                <option>Marrackech</option>
-                                                <option>Agadir</option>
-                                                <option>Casablanca</option>
-                                                <option>Paris</option>
-                                                <option>Londres</option>
-                                                <option>New York</option>
-                                                <option>Madrid</option>
-                                            </select>
-                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 w-full md:mb-0 md:w-1/2">
-                                        <div class="relative">
-                                            <select class="block w-full appearance-none appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="arrive">
-                                                <option value="">To</option>
-                                                <option>Casablanca</option>
-                                                <option>Marrackech</option>
-                                                <option>Agadir</option>
-                                                <option>Casablanca</option>
-                                                <option>Paris</option>
-                                                <option>Londres</option>
-                                                <option>New York</option>
-                                                <option>Madrid</option>
-                                            </select>
-                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                                            </div>
-                                        </div>
+                        <div class="-mx-3 mb-6 flex flex-wrap">
+                            <div class="w-full px-3 md:mb-0">
+                                <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="societes"> Societe </label>
+                                <div class="relative mb-3">
+                                    <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="societes">
+                                        <option value="">Select a Societe</option>
+                                        <option>Royal Air Maroc</option>
+                                        <option>Gazelle</option>
+                                        <option>Fly Emarates</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
                                     </div>
                                 </div>
+
                                 <div class="mb-6 block w-full">
-                                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="button">Add</button>
+                                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="submit">Add Flight</button>
                                 </div>
-                            </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-lg lg:min-w-[450px]">
+            <h2 class="mb-4 text-lg font-bold text-[#004374]">Add a Direction</h2>
+            <form class="flex flex-col gap-3" action="#" method="post">
+                <div class="flex flex-col gap-1 md:flex-row">
+                    <div class="mb-1 w-full md:mb-0 md:w-1/2">
+                        <div class="relative">
+                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="depart">
+                                <option value="">From</option>
+                                <option>Casablanca</option>
+                                <option>Marrackech</option>
+                                <option>Agadir</option>
+                                <option>Casablanca</option>
+                                <option>Paris</option>
+                                <option>Londres</option>
+                                <option>New York</option>
+                                <option>Madrid</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                            </div>
                         </div>
                     </div>
-                </main>
+                    <div class="mb-3 w-full md:mb-0 md:w-1/2">
+                        <div class="relative">
+                            <select class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none" id="arrive">
+                                <option value="">To</option>
+                                <option>Casablanca</option>
+                                <option>Marrackech</option>
+                                <option>Agadir</option>
+                                <option>Casablanca</option>
+                                <option>Paris</option>
+                                <option>Londres</option>
+                                <option>New York</option>
+                                <option>Madrid</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 block w-full">
+                    <button class="focus:shadow-outline w-full rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
             </div>
         </div>
     </body>
