@@ -12,7 +12,7 @@ public class DaoDirectionImp extends Dao implements DaoDirection   {
 
     public Boolean createDirections(String firstCity, String secondCity)  {
         try {
-            PreparedStatement st = this.conn.prepareStatement("INSERT INTO direcions(depart,arrive) VALUES(?,?),(?,?)");
+            PreparedStatement st = this.conn.prepareStatement("INSERT INTO directions(depart,arrive) VALUES(?,?),(?,?)");
             st.setString(1, firstCity);
             st.setString(2, secondCity);
             st.setString(3, secondCity);
