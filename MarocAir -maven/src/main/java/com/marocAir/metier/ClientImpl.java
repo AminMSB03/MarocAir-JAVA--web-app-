@@ -16,7 +16,7 @@ public class ClientImpl {
     public ArrayList<Vols> search(String depart, String arrive, Date date) throws Exception {
         // get the directions ids to use the on the search of the vols
         DaoDirection daoDirection = new DaoDirectionImp();
-        int[] idsDirection= daoDirection.selectDirection(depart,arrive);
+        int idsDirection= daoDirection.selectDirection(depart,arrive);
 
         DaoVols daoVols = new DaoVols();
         ArrayList<Vols> vols = daoVols.getVols(idsDirection,date);
