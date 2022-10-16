@@ -10,7 +10,7 @@ public abstract class Dao {
 
     public Dao() throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
-        this.conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/marocAir","postgres","vendredi1120deux!");
+        this.conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/marocAir","postgres","bakayoko123");
     }
 
 }
