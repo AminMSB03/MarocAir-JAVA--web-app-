@@ -1,8 +1,11 @@
 package com.marocair.dao;
 
+import com.marocair.model.Direction;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class DaoDirectionImp extends Dao implements DaoDirection   {
@@ -42,5 +45,23 @@ public class DaoDirectionImp extends Dao implements DaoDirection   {
             i++;
         }
         return Ids;
+    }
+
+    public ArrayList<Direction> selectAllDirections (){
+        ArrayList<Direction> directions = new ArrayList<>();
+        try {
+            PreparedStatement st = this.conn.prepareStatement("SELECT * FROM directions");
+            ResultSet result = st.executeQuery();
+            do {
+                Direction d = new Direction();
+                d.setId(Integer.parseInt(result.getString(1)));
+                d.setDepart(result.getString(2));
+                d.setArrive(result.getString(3));
+                directions.add(d);
+            }while (result.next());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return directions;
     }
 }
