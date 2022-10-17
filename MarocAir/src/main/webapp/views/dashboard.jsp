@@ -190,16 +190,24 @@
         <!-- les messages -->
         <c:choose>
             <c:when test="${echo.contains('success')}">
-                <div class="flex absolute top-5 right-5 items-center p-4 space-x-4 w-full max-w-xs text-white bg-green-300 rounded-lg divide-x divide-gray-200 shadow opacity-90" role="alert">
+                <div name="msg" class="flex absolute top-5 right-5 items-center p-4 space-x-4 w-full max-w-xs text-white bg-green-300 rounded-lg divide-x divide-gray-200 shadow opacity-90" role="alert">
                     <div class="text-sm font-normal font-bold"><c:out value="${echo}" /></div>
                 </div>
             </c:when>
             <c:when test="${echo == null}"></c:when>
             <c:otherwise>
-                <div class="flex absolute top-5 right-5 items-center p-4 space-x-4 w-full max-w-xs text-white bg-red-300 rounded-lg divide-x divide-gray-200 shadow opacity-90" role="alert">
+                <div name="msg" class="flex absolute top-5 right-5 items-center p-4 space-x-4 w-full max-w-xs text-white bg-red-300 rounded-lg divide-x divide-gray-200 shadow opacity-90" role="alert">
                     <div class="text-sm font-normal font-bold"><c:out value="${echo}" /></div>
                 </div>
             </c:otherwise>
         </c:choose>
     </body>
+<script>
+    let msg = document.getElementsByName("msg");
+    setTimeout(()=>{
+        msg.forEach(e => {
+            e.remove();
+        })
+    },5000);
+</script>
 </html>
